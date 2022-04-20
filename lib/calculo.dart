@@ -21,15 +21,16 @@ class _calculoState extends State<calculo> {
        });
 
      }else{
-       if((precoAlcool / precoGasolina) >= 0.7){
+      if((precoAlcool / precoGasolina) >=0.7){
         setState(() {
-          _textoresultado ="Melhor abastecer com gasolina";
+          _textoresultado = "Melhor abastecer gasolina";
         });
-       }else{
-         _textoresultado="Melhor abastecer com Alcool";
-       }
+      }else {
+        setState(() {
+          _textoresultado = "Melhor abastecer alcool";
+        });
+      }
 
-       };
      }
    }
 
