@@ -21,6 +21,7 @@ class _calculoState extends State<calculo> {
       body: Container(
         padding: EdgeInsets.all(20),
         child: Column (
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
           Padding(padding:EdgeInsets.only(bottom: 10),
             child:Image.asset('images/logo.png'),
