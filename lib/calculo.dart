@@ -29,9 +29,14 @@ class _calculoState extends State<calculo> {
         setState(() {
           _textoresultado = "Melhor abastecer alcool";
         });
-      }
 
+      }
+      _limparcamposa();
      }
+   }
+   void _limparcamposa(){
+     _controllerGasolina.text = "";
+     _controllerAlcool.text = "";
    }
 
   @override
