@@ -21,9 +21,15 @@ class _calculoState extends State<calculo> {
        });
 
      }else{
-       setState(() {
-         _textoresultado = "Número valido, faça outro calculo";
-       });
+       if((precoAlcool / precoGasolina) >= 0.7){
+        setState(() {
+          _textoresultado ="Melhor abastecer com gasolina";
+        });
+       }else{
+         _textoresultado="Melhor abastecer com Alcool";
+       }
+
+       };
      }
    }
 
