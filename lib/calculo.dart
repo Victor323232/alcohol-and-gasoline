@@ -71,7 +71,17 @@ class _calculoState extends State<calculo> {
                  onPressed: (){},
                )
 
-           )
+           ),
+            Padding(
+                padding: EdgeInsets.only(top: 20),
+                child: Text("Resultado",
+                 style: TextStyle(
+                   fontSize: 30
+                 ),
+                ) ,
+
+            )
+
           ],
         ),
 
