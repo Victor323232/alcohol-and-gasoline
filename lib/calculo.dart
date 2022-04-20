@@ -19,8 +19,9 @@ class _calculoState extends State<calculo> {
         backgroundColor: Color(0xfff520e8e),
       ),
       body: Container(
-        padding: EdgeInsets.all(20),
+
         child: SingleChildScrollView(
+          padding: EdgeInsets.all(20),
           child: Column (
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
