@@ -11,13 +11,19 @@ class calculo extends StatefulWidget {
 class _calculoState extends State<calculo> {
    TextEditingController _controllerAlcool = TextEditingController();
    TextEditingController _controllerGasolina = TextEditingController();
-
+    String _textoresultado =  "";
    void _calcular (){
-     double? precoAlcool = double.tryParse(_controllerAlcool.text);
-     if(precoAlcool== null){
-        print("preço nulo");
+     double? precoAlcool = double.tryParse(_controllerAlcool.text);//conversion
+     double? precoGasolina = double.tryParse(_controllerGasolina.text);
+     if(precoAlcool== null || precoGasolina==null){
+       setState(() {
+         _textoresultado = "Número invalido, digite número maiores que 0 e utilizando[.]";
+       });
+
      }else{
-       print("preço não nulo");
+       setState(() {
+         _textoresultado = "Número valido, faça outro calculo";
+       });
      }
    }
 
@@ -86,7 +92,7 @@ class _calculoState extends State<calculo> {
               ),
               Padding(
                 padding: EdgeInsets.only(top: 20),
-                child: Text("Resultado",
+                child: Text(_textoresultado,
                   style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
