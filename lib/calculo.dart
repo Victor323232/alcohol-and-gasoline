@@ -9,6 +9,8 @@ class calculo extends StatefulWidget {
 }
 
 class _calculoState extends State<calculo> {
+   TextEditingController _controllerAlcool = TextEditingController();
+   TextEditingController _controllerGasolina = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,7 +43,7 @@ class _calculoState extends State<calculo> {
                 style: TextStyle(
                     fontSize: 20
                 ),
-
+                controller: _controllerAlcool,
               ),
              TextField(
                 keyboardType: TextInputType.number,
@@ -51,6 +53,7 @@ class _calculoState extends State<calculo> {
                 style: TextStyle(
                     fontSize: 20
                 ),
+                controller:_controllerGasolina ,
               ),
 
            Padding(padding: EdgeInsets.all(20),
