@@ -57,10 +57,14 @@ class _calculoState extends State<calculo> {
               ),
 
            Padding(padding: EdgeInsets.all(20),
-              child: ElevatedButton(
+              child: TextButton(
+                style: TextButton.styleFrom(
+                  backgroundColor: Color(0xfff520e8e)
+                ),
                  child: Text("Calcular",
                    style: TextStyle(
                      fontSize: 30,
+                     color: Colors.white
                    ),
                  ),
                  onPressed: (){},
