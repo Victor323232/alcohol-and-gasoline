@@ -11,6 +11,16 @@ class calculo extends StatefulWidget {
 class _calculoState extends State<calculo> {
    TextEditingController _controllerAlcool = TextEditingController();
    TextEditingController _controllerGasolina = TextEditingController();
+
+   void _calcular (){
+     double? precoAlcool = double.tryParse(_controllerAlcool.text);
+     if(precoAlcool== null){
+        print("preço nulo");
+     }else{
+       print("preço não nulo");
+     }
+   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -70,7 +80,7 @@ class _calculoState extends State<calculo> {
                           color: Colors.white
                       ),
                     ),
-                    onPressed: (){},
+                    onPressed: _calcular,
                   )
 
               ),
