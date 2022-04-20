@@ -20,33 +20,34 @@ class _calculoState extends State<calculo> {
       ),
       body: Container(
         padding: EdgeInsets.all(20),
-        child: Column (
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-          Padding(padding:EdgeInsets.only(bottom: 10),
-            child:Image.asset('images/logo.png'),
-          ),
-            Padding(padding: EdgeInsets.all(18),
-              child:Text(
-                "Saiba qual a melhor opção para abastecimento do seu carro",
-                style:TextStyle(
-                  fontSize: 27,
-                  fontWeight: FontWeight.bold,
-                ),
-
+        child: SingleChildScrollView(
+          child: Column (
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              Padding(padding:EdgeInsets.only(bottom: 10),
+                child:Image.asset('images/logo.png'),
               ),
-            ),
-           TextField(
+              Padding(padding: EdgeInsets.all(18),
+                child:Text(
+                  "Saiba qual a melhor opção para abastecimento do seu carro",
+                  style:TextStyle(
+                    fontSize: 27,
+                    fontWeight: FontWeight.bold,
+                  ),
+
+                ),
+              ),
+              TextField(
                 keyboardType: TextInputType.number,
                 decoration: InputDecoration(
-                    labelText: "Preço Álcool ex:1.59",
+                  labelText: "Preço Álcool ex:1.59",
                 ),
                 style: TextStyle(
                     fontSize: 20
                 ),
                 controller: _controllerAlcool,
               ),
-             TextField(
+              TextField(
                 keyboardType: TextInputType.number,
                 decoration: InputDecoration(
                   labelText: "Preço Gasolina ex:3.59",
@@ -57,32 +58,34 @@ class _calculoState extends State<calculo> {
                 controller:_controllerGasolina ,
               ),
 
-           Padding(padding: EdgeInsets.all(20),
-              child: TextButton(
-                style: TextButton.styleFrom(
-                  backgroundColor: Color(0xfff520e8e)
-                ),
-                 child: Text("Calcular",
-                   style: TextStyle(
-                     fontSize: 30,
-                     color: Colors.white
-                   ),
-                 ),
-                 onPressed: (){},
-               )
+              Padding(padding: EdgeInsets.all(20),
+                  child: TextButton(
+                    style: TextButton.styleFrom(
+                        backgroundColor: Color(0xfff520e8e)
+                    ),
+                    child: Text("Calcular",
+                      style: TextStyle(
+                          fontSize: 30,
+                          color: Colors.white
+                      ),
+                    ),
+                    onPressed: (){},
+                  )
 
-           ),
-            Padding(
+              ),
+              Padding(
                 padding: EdgeInsets.only(top: 20),
                 child: Text("Resultado",
-                 style: TextStyle(
-                   fontSize: 30
-                 ),
+                  style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ) ,
 
-            )
+              )
 
-          ],
+            ],
+          ),
         ),
 
       ),
